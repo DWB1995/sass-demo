@@ -23,6 +23,16 @@ $base: #f00;
 }
 
 
+//Extend
+.transition{
+
+  -moz-transition: background-color .3s ease-in;
+  -webkit-transition: background-color .3s ease-in;
+  -o-transition: background-color .3s ease-in;
+  transition: background-color .3s ease-in;
+
+}
+
 
 /* CSS Reset */
 html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -188,10 +198,7 @@ nav {
     text-align: center;
     color: white;
     @include rounded;
-    -moz-transition: background-color .3s ease-in;
-    -webkit-transition: background-color .3s ease-in;
-    -o-transition: background-color .3s ease-in;
-    transition: background-color .3s ease-in;
+    @extend .transition;
   }
   ul li a:hover {
     background-color: #C2CF52;
@@ -227,10 +234,7 @@ header p {
   font-weight: bold;
   padding: 10px;
   color: white;
-  -moz-transition: all .3s ease-in;
-  -webkit-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  @extend .transition;
 }
 .new a:hover span.overlay {
   opacity: 1;
@@ -331,10 +335,7 @@ img { float: left; }
   -o-border-radius: 15px 15px 0 0;
   border-radius: 15px 15px 0 0;
   behavior: url(PIE.htc);
-  -moz-transition: all .3s ease-in;
-  -webkit-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  @extend .transition;
 }
 #player_nav li.detail a { background-position: 0 -43px; }
 #player_nav li.video a { background-position: 0 -129px; }
@@ -464,10 +465,7 @@ p.reviewer { clear: both; font-size: .95em; margin: 15px 4px; }
     color:  #4E4F48;
     font-size: 1.3em;
     margin-left: 1em;
-    -moz-transition: all .3s ease-in;
-    -webkit-transition: all .3s ease-in;
-    -o-transition: all .3s ease-in;
-    transition: all .3s ease-in;
+    @extend .transition;
   }
    li a:hover {
     @include rounded(8px);
